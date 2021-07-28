@@ -1,2 +1,2 @@
 # go-react-jwt
-using jwt tokken in golang + fiber
+using jwt token in golang + fiber
