@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"goreactjwt/controllers"
+	"go-react-jwt/controllers"
 
 	"github.com/gofiber/fiber"
 )

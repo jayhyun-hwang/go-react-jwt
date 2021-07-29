@@ -1,8 +1,8 @@
 package main
 
 import (
-	"goreactjwt/database"
-	"goreactjwt/routes"
+	"go-react-jwt/database"
+	"go-react-jwt/routes"
 
 	"github.com/gofiber/fiber"
 	"github.com/gofiber/fiber/middleware/cors"

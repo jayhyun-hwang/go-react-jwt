@@ -1,7 +1,7 @@
 package database
 
 import (
-	"goreactjwt/models"
+	"go-react-jwt/models"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"

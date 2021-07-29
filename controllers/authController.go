@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"goreactjwt/database"
-	"goreactjwt/models"
+	"go-react-jwt/database"
+	"go-react-jwt/models"
 	"strconv"
 	"time"
 
