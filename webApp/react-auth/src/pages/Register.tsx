@@ -1,9 +1,12 @@
 import React, { SyntheticEvent, useState } from 'react'
+import { Redirect } from 'react-router-dom';
 
 export default function Register() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [redirect, setRedirect] = useState(false);
+
 
     const submit = async (e: SyntheticEvent) => {
         e.preventDefault();
@@ -12,20 +15,24 @@ export default function Register() {
         //     email: email,
         //     password: password
         // });
-        const response = await fetch('http://localhost:8000/api/register', {
+
+        // const response = await fetch('http://localhost:8000/api/register', {
+        await fetch('http://localhost:8000/api/register', {
             method: 'POST',
-            headers: {'Content-Type':'application/json'},
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 name,
                 email,
                 password
             })
         });
-
-        const content = await response.json();
-
-        console.log(content);
+        setRedirect(true);
     }
+    if (redirect) {
+        return <Redirect to="/login" />;
+    }
+    // const content = await response.json();
+    // console.log(content);
     return (
         <form onSubmit={submit}>
             <h1 className="h3 mb-3 fw-normal">Please register</h1>
